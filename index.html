@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="scripts.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/uk.js"></script>
+    <title>Weather forecast</title>
 </head>
 <body>
-    <p>Your location is:<div id='location'></div></p>
-    <button type="button" class="btn btn-primary" id='past'>The day before</button>
-    <button type="button" class="btn btn-primary" id='future'>The day after</button>
-    
-    
+    <div id='mainDisplay'>
+        <p>Your location is:<div id='location'></div></p>
+        <div id='temperature'>XX&#8451;</div>
+        <div id='weatherDescription'>The weather is nice today.</div>
+        
+        <div id='buttons'>
+            <button type="button" class="btn btn-primary" id='past'>Yesterday</button>
+            <button type="button" class="btn btn-primary" id='today'>Today</button>
+            <button type="button" class="btn btn-primary" id='future'>Tomorrow</button>
+        </div>
+    </div>
+   
 
 </body>
 </html>
