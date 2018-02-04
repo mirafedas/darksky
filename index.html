@@ -12,9 +12,12 @@
 </head>
 <body>
     <div id='mainDisplay'>
-        <p>Your location is:<div id='location'></div></p>
+        <p><b>Your location is:</b></p>
+        <p>Latitude: <div id='startLat'></div></p>
+        <p> Longitude: <div id='startLon'></div></p>
+      
         <div id='temperature'>XX&#8451;</div>
-        <div id='weatherDescription'>The weather is nice today.</div>
+        <div id='weatherDescription'>The weather is nice today.</div><br>
         
         <div id='buttons'>
             <button type="button" class="btn btn-primary" id='past'>Yesterday</button>
@@ -22,7 +25,7 @@
             <button type="button" class="btn btn-primary" id='future'>Tomorrow</button>
         </div>
     </div>
-   
+   <div id='footer'><a href='https://darksky.net/poweredby/'>Powered by Darksky.net</a></div>
 
 </body>
 </html>
