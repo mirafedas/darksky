@@ -6,18 +6,35 @@ window.onload = function findLocation() {
     var startPos;
     var geoSuccess = function(position) {
       startPos = position;
-      document.getElementById('startLat').innerHTML = startPos.coords.latitude.toFixed(4);
-      document.getElementById('startLon').innerHTML = startPos.coords.longitude.toFixed(4);
-    };
-    var geoError = function(error) {
-        alert('Your position is not defined');
-    };
-    navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
-  };
+      latitude = document.getElementById('startLat').innerHTML = startPos.coords.latitude.toFixed(4);
+      longitude = document.getElementById('startLon').innerHTML = startPos.coords.longitude.toFixed(4);
+}
+    //Request to Darksky.net:
 
-//Preparing data to make a request to Darksky.net:
+var weather = {};
+function getWeather(url) {
+      $.ajax({
+        method: GET,
+        url: "'https://api.darksky.net/forecast/' + darkskyKey + '/' + latitude + ',' + longitude",
+        crossDomain: true,
+        dataType: "jsonp",
+        statusCode: {
+          404: function() {
+            alert( "Forecast not found" );
+          }},
+      })
+        .done(function() {
+           document.getElementById('weatherDescription').innerHTML = 'forecast';
+      });
+    } 
+   
+var geoError = function(error) {
+         alert('Your position is not defined');
+   };
+navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+ 
 
-var url = 'https://api.darksky.net/forecast/' + darkskyKey + '/' + latitude + ',' + longitude;
+
 
 //Reguesting the today weather from Darksky.net:
 
@@ -53,3 +70,4 @@ var url = 'https://api.darksky.net/forecast/' + darkskyKey + '/' + latitude + ',
 // document.getElementById('past').onclick(getForecast());
 
 //document.getElementById('future').onclick(getForecast())
+  }
