@@ -5,10 +5,12 @@ var darkskyKey = '841e534fb31d0704d2286fa1e12346cf';
 window.onload = function findLocation() {
     var startPos;
     var geoSuccess = function(position) {
+      console.log(position);
       startPos = position;
       latitude = document.getElementById('startLat').innerHTML = startPos.coords.latitude.toFixed(4);
       longitude = document.getElementById('startLon').innerHTML = startPos.coords.longitude.toFixed(4);
-}};
+      console.log(latitude, longitude);
+};
     //Request to Darksky.net:
 
 var weather = {};
@@ -32,6 +34,11 @@ var geoError = function(error) {
          alert('Your position is not defined');
    };
 navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+    
+    
+    
+    
+}
  
 
 
