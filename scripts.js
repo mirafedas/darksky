@@ -8,7 +8,7 @@ window.onload = function findLocation() {
       startPos = position;
       latitude = document.getElementById('startLat').innerHTML = startPos.coords.latitude.toFixed(4);
       longitude = document.getElementById('startLon').innerHTML = startPos.coords.longitude.toFixed(4);
-}
+}};
     //Request to Darksky.net:
 
 var weather = {};
@@ -70,4 +70,4 @@ navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 // document.getElementById('past').onclick(getForecast());
 
 //document.getElementById('future').onclick(getForecast())
-  }
+  
