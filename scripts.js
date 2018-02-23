@@ -17,7 +17,7 @@ window.onload = function findLocation() {
 
 //Preparing data to make a request to Darksky.net:
 
-var url = 'https://api.darksky.net/forecast/' + darkskyKey + '/' + latitude + ',' + longitude;
+//var url = 'https://api.darksky.net/forecast/' + darkskyKey + '/' + latitude + ',' + longitude;
 
 //Reguesting the today weather from Darksky.net:
 
