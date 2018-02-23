@@ -3,9 +3,7 @@ var darkskyKey = '841e534fb31d0704d2286fa1e12346cf';
 
 //Getting users position:
 window.onload = function findLocation() {
-    var startPos;
-    var geoSuccess = function(position) {
-      startPos = position;
+    var geoSuccess = function() {
       document.getElementById('startLat').innerHTML = startPos.coords.latitude.toFixed(4);
       document.getElementById('startLon').innerHTML = startPos.coords.longitude.toFixed(4);
     };
